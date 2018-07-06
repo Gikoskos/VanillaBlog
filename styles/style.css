@@ -1,0 +1,214 @@
+html {
+    background-image: linear-gradient(to bottom,
+                                      rgba(242,246,248,1) 0%,
+                                      rgba(216,225,231,1) 15%,
+                                      rgba(181,198,208,1) 21%,
+                                      rgba(203,219,229,1) 61%,
+                                      rgba(217,232,242,1) 87%,
+                                      rgba(224,239,249,1) 100%);
+    background-image: url(../images/what-the-hex.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+body {
+    margin: auto;
+    width: auto;
+    max-width: 720px;
+    font-family: "Signika", sans-serif;
+}
+
+/* Using the flexbox layout style */
+header, main, footer {
+    display: flex;
+}
+
+/*** Styling the logo ***/
+#main-logo {
+    display: block;
+    width: 90%;
+    text-align: center;
+    text-shadow: 1px 0px 10px darkgrey;
+    line-height: 0;
+    color: black;
+}
+
+#main-logo:hover {
+    opacity: 0.5;
+}
+
+#main-logo-caption {
+    background: center;
+    font-family: "Exo", arial;
+    transform: rotate(-5deg);
+    text-decoration: none;
+}
+
+#main-logo-link {
+    text-decoration: none;
+}
+
+#main-logo-link:visited {
+    color: initial;
+}
+
+
+/*** Styling the navigation bar next to the logo ***/
+#nav-menu {
+    /* padding */
+    padding-left: 100px;
+    display: block;
+}
+
+#nav-menu ul {
+    /* margin */
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    /* padding */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    /* list */
+    list-style-type: none;
+    /* misc */
+    overflow: hidden;
+    display: block;
+}
+
+#nav-menu li {
+    float: left;
+}
+
+.nav-menu-tiles {
+    width: auto;
+    /* margin */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border */
+    border: 1px solid white;
+    border-radius: 20px;
+    /* padding */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* text */
+    text-align: center;
+    text-decoration: none;
+    color: #FFE47F;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 1px black;
+    /* misc */
+    box-shadow: 1px 2px 3px black;
+    display: block;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+.nav-menu-tiles a {
+    text-decoration: none;
+    color: #FFE47F;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.nav-menu-tiles:focus {
+    border: 0.1rem dashed lightgrey;
+}
+
+.nav-menu-tiles:hover {
+    cursor: pointer;
+    border-color: cyan;
+    background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+}
+
+.nav-menu-tiles:active img {
+    filter: invert(100%);
+}
+
+.nav-menu-tiles:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    box-shadow: 0 1px 3px black;
+    color: white;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+/* styling the sidebar */
+#sidebar {
+    position: sticky;
+    border-left: 2px solid black;
+    box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
+    border-radius: 10px;
+    display: block;
+    margin: 100px 30px auto 1rem;
+    padding: 10px 10px 100px 10px;
+}
+
+.sidebar-content-boxes {
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+
+.sidebar-box-headers {
+    display: block;
+    margin-left: 10px;
+    padding: 0;
+}
+
+/* styling the related box */
+.sidebar-links {
+    padding-left: 16px;
+    display: block;
+}
+
+#sidebar-link-list li {
+    display: block;
+    padding: 1rem;
+    margin-left: -30px;
+}
+
+.sidebar-links:hover {
+    background: url('../images/arrow-right.svg') no-repeat 0% 2px;
+    background-size: 16px 16px;
+}
+
+/* styling the search box */
+input[type="search"] {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+}
+
+/* styling the article */
+article {
+    width: 100%;
+    text-align: justify;
+    display: block;
+    font-size: 1.265rem;
+}
+
+article h2, article h3 {
+    text-align: center;
+}
+
+article > p {
+    line-height: 1.7rem;
+    hyphens: auto;
+    text-indent: 2%;
+}
+
+/* styling the footer */
+footer {
+    padding: 0;
+    position: relative;
+    left: 27%;
+}
+
+/* misc */
+[href^=mailto]::before {
+    /* prepend all mailto hyperlinks with the envelope emoji */
+    content: '✉ ';
+}

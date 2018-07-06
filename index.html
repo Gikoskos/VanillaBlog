@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- tells mobile browsers to adopt real viewport width for this page -->
+        <meta name="viewport" content="width=device-width">
+        <!-- Site name -->
+        <title>My blog</title>
+        <!-- Favicon settings -->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <!-- Fonts used in the site -->
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!-- Stylesheets -->
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <header>
+            <a id="main-logo-link" href="index.html">
+                <figure id="main-logo">
+                    <img srcset="images/logo/sitelogo20.png 320w,
+                                 images/logo/sitelogo40.png 480w,
+                                 images/logo/sitelogo80.png 800w"
+                         sizes="(max-width: 320px) 280px,
+                                (max-width: 480px) 440px,
+                                800px"
+                         src="images/logo/sitelogo80.png"
+                         alt="Site logo">
+                    <figcaption>
+                        <h1 id="main-logo-caption">
+                            My blog
+                        </h1>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <!-- navigation list is in the header because I want it
+            to appear on the same line as the logo -->
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <figure class="nav-menu-tiles">
+                            <img src="images/bxs-categories.svg" width="18" height="18"/>
+                            <figcaption>
+                                Articles
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="nav-menu-tiles">
+                            <img src="images/bxl-github.svg" width="18" height="18"/>
+                            <figcaption>
+                                Github
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="nav-menu-tiles">
+                            <img src="images/bxs-user-circle.svg" width="18" height="18"/>
+                            <figcaption>
+                                About
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            <aside id="sidebar">
+                <div class="sidebar-content-boxes">
+                    <h2 class="sidebar-box-headers">Related</h2>
+                    <ul id="sidebar-link-list">
+                        <li><a class="sidebar-links" href="#">link 1</a></li>
+                        <li><a class="sidebar-links" href="#">link 2</a></li>
+                        <li><a class="sidebar-links" href="#">link 3</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-content-boxes">
+                    <h2 class="sidebar-box-headers">Search</h2>
+                    <form>
+                        <input type="search" name="q" placeholder="Search blog...">
+                    </form>
+                </div>
+            </aside>
+
+            <article>
+                <h2>This is where the article goes</h2>
+
+                <p>Lorem ipsum dolor sit amet, dignissim parturient justo nunc in wisi orci, ullamcorper rhoncus ut aliquet pretium, cras donec vitae nulla in, magnis ligula purus vel mus, pellentesque eget aliquam aenean in ultricies. Eleifend molestie venenatis lacinia tristique in vel. Justo risus magna justo quam, ridiculus tristique mauris turpis, suscipit metus ut tortor lobortis sed esse, vivamus gravida, at nunc commodo euismod eu justo enim. Dolore cras, accumsan vehicula rutrum sit, mollis nec gravida ligula, diam volutpat eros iaculis porttitor tellus turpis. At tellus dignissim vel nec, dui dictum tincidunt, ipsum sed hendrerit libero risus.</p>
+                <hr>
+                <p>Hymenaeos id feugiat, lectus vivamus, tellus laoreet ut eget enim etiam lacus, metus nec. Elit sed nonummy erat velit integer sagittis, rhoncus dignissim consectetuer sociis venenatis taciti, quis vel morbi. Molestie dui, sapien lectus metus sit lorem non. Lorem amet cras cras, ut ut vel ultrices, tellus proin, tortor diam et, debitis nec. Gravida ut et dolor aliquet, aute diam tellus risus tristique. Sed et tempus maecenas. Tellus amet sed, rutrum in mus nisl venenatis, quis wisi aut. Elit nunc sit, sagittis sed, fusce nisl placerat pharetra pretium tortor vestibulum, etiam erat, rutrum in egestas. Pede sit a orci, aliquam nulla semper id morbi, amet turpis etiam vulputate turpis.</p>
+                <h3 id="Sub1">Subheader1</h3>
+                <p>Libero metus, dictumst in lectus et enim, suscipit lacus, a et tincidunt eget in accumsan ac. Magna mauris, venenatis erat adipiscing sit ligula quam posuere, netus eget nulla elit integer. Vestibulum hac libero, lobortis quam, placerat donec, nunc amet quis. Nullam est venenatis, in eu et dolor nonummy. A et malesuada faucibus convallis donec feugiat, cursus mattis curabitur lacus nunc. Montes nec cursus parturient a, donec neque purus tincidunt eu, amet lectus mollis et mi fusce, class velit purus tempus fermentum, malesuada eget sem nec accumsan. Ante quam nunc orci wisi, in neque erat felis quis nunc orci. Imperdiet in pharetra, eveniet dolores donec wisi in. Aliquam lobortis aliquet velit, quisque lobortis et vitae convallis imperdiet consequat, blandit dictum donec, dignissim potenti magna odio eu curabitur.</p>
+                <h3 id="Sub2">Subheader2</h3>
+                <p>At integer enim nec, sed odio odit suscipit iaculis auctor. At morbi egestas, in euismod potenti porttitor hymenaeos, pellentesque faucibus, mauris purus justo vitae rhoncus pharetra tincidunt. Tincidunt ultricies hendrerit nec auctor mauris amet, tincidunt eros mattis. Nihil fringilla ante, sed faucibus, lorem quis in mi, porttitor vel, sed proin sed cursus in urna aliquam. In leo, tempor quis nulla in elit turpis, quis semper molestie varius consectetuer, enim lacus in. Dignissim tempus ac, urna primis, libero etiam feugiat mauris pulvinar dictum vestibulum, montes quis nunc eu lorem, leo in neque ut habitant. Vel mauris metus, wisi tincidunt leo quam ligula lobortis arcu, elit eget quam ipsum ut libero, diam tellus luctus eget tortor aliquam nonummy. Minim et bibendum nullam, ut pretium in, eget sapien in massa molestie est a. Ultrices maecenas, cum lorem ultrices orci quis eu, nec aliquet eget sit sapien gravida sed, nisl sed quisque et dictum a.</p>
+
+                <p>This text is <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">
+                Lorem Ipsum</a></p>
+            </article>
+
+        </main>
+
+        <footer>
+            <p>Copyright © 2018 <a href="mailto:georgekoskerid@outlook.com&subject=Mail%20from%20site">George K.</a>
+            All rights reserved.</p>
+        </footer>
+    </body>
+</html>

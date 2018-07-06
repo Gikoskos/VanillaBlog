@@ -1,0 +1,156 @@
+html {
+    background-image: linear-gradient(to bottom,
+                                      rgba(242,246,248,1) 0%,
+                                      rgba(216,225,231,1) 15%,
+                                      rgba(181,198,208,1) 21%,
+                                      rgba(203,219,229,1) 61%,
+                                      rgba(217,232,242,1) 87%,
+                                      rgba(224,239,249,1) 100%);
+    background-image: url(../images/what-the-hex.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0 10% 10% auto;
+    width: auto;
+    max-width: 900px;
+    font-family: "Signika", sans-serif;
+}
+
+#main-logo {
+    display: block;
+    float: left;
+    padding: auto;
+    width: auto;
+    text-align: center;
+    text-shadow: 1px 0px 10px darkgrey;
+    line-height: 0;
+    color: black;
+}
+
+#main-logo-caption {
+    background: center;
+    font-family: "Exo", arial;
+    transform: rotate(-5deg);
+}
+
+#main-logo:hover {
+    opacity: 0.5;
+}
+
+#nav-menu {
+    display: block;
+}
+
+.nav-menu-tiles {
+    display: block;
+    max-width: 100%;
+    outline: none;
+    text-decoration: none;
+    width: 10%;
+    height: 10%;
+    float: right;
+    border: 0.1rem solid cyan;
+    padding: 1% 2% 1% 2%;
+    vertical-align: middle;
+    margin: 1% 1% 1% 1%;
+    text-align: center;
+    border-radius: 20px;
+    color: #FFE47F;
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-menu-tiles {
+        font-size: 86%;
+        display: initial;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #main-logo-caption {
+        font-size: 1rem;
+    }
+
+    /*.nav-menu-tiles {
+        font-size: 50%;
+        display: intial;
+    }*/
+}
+
+
+.nav-menu-tiles:focus {
+    border: 0.1rem dashed lightgrey;
+}
+
+.nav-menu-tiles:hover {
+    background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+}
+
+.nav-menu-tiles:active {
+    color: white;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+#main-logo-link:visited {
+    color: initial;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: auto;
+    width: 90%;
+    padding: 4% 1% 15% 5%;
+}
+
+nav ul li a {
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+article {
+    float: right;
+    vertical-align: middle;
+    text-align: justify;
+    display: block;
+    width: 60%;
+    font-size: 1.25rem;
+}
+
+article h2, article h3 {
+    text-align: left;
+}
+
+/* Style for paragraphs that are directly underneath
+   the article */
+article > p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    hyphens: auto;
+    text-indent: 10%;
+    letter-spacing: .04rem;
+}
+
+.sidebar {
+    display: inline-block;
+    float: left;
+}
+
+.page-divider {
+    display: block;
+    border: 10px solid black;
+}
+
+
+[href^=http]::after {
+  content: '⤴';
+}
+
+[href^=mailto]::before {
+  content: '✉ ';
+}
+
+#tt-p {
+    
+}
