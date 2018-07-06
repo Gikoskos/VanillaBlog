@@ -49,8 +49,12 @@ header, main, footer {
 
 /*** Styling the logo ***/
 #main-logo {
+    /* push the logo a few pixels on the left to not intrude
+      on the navigation bar */
+    margin-left: 10px;
+    padding: 0;
     display: block;
-    width: 90%;
+    width: 100%;
     text-align: center;
     text-shadow: 1px 0px 10px darkgrey;
     line-height: 0;
@@ -109,10 +113,6 @@ header, main, footer {
 }
 
 .nav-menu-tiles {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
     width: auto;
     /* margin */
     margin-left: 10px;
@@ -137,6 +137,11 @@ header, main, footer {
     background-image: -webkit-linear-gradient(left, #00b4db, #0083b0);
     background-image: -o-linear-gradient(left, #00b4db, #0083b0);
     background-image: linear-gradient(to right, #00b4db, #0083b0);
+    /* disables selection of the text and image on each tile from the user */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .nav-menu-tiles a {
