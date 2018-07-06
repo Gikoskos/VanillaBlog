@@ -1,26 +1,4 @@
 html {
-    background-image: -webkit-gradient(linear,
-                                      left top, left bottom,
-                                      from(rgba(242,246,248,1)),
-                                      color-stop(15%, rgba(216,225,231,1)),
-                                      color-stop(21%, rgba(181,198,208,1)),
-                                      color-stop(61%, rgba(203,219,229,1)),
-                                      color-stop(87%, rgba(217,232,242,1)),
-                                      to(rgba(224,239,249,1)));
-    background-image: -webkit-linear-gradient(top,
-                                      rgba(242,246,248,1) 0%,
-                                      rgba(216,225,231,1) 15%,
-                                      rgba(181,198,208,1) 21%,
-                                      rgba(203,219,229,1) 61%,
-                                      rgba(217,232,242,1) 87%,
-                                      rgba(224,239,249,1) 100%);
-    background-image: -o-linear-gradient(top,
-                                      rgba(242,246,248,1) 0%,
-                                      rgba(216,225,231,1) 15%,
-                                      rgba(181,198,208,1) 21%,
-                                      rgba(203,219,229,1) 61%,
-                                      rgba(217,232,242,1) 87%,
-                                      rgba(224,239,249,1) 100%);
     background-image: linear-gradient(to bottom,
                                       rgba(242,246,248,1) 0%,
                                       rgba(216,225,231,1) 15%,
@@ -42,8 +20,6 @@ body {
 
 /* Using the flexbox layout style */
 header, main, footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -64,9 +40,7 @@ header, main, footer {
 #main-logo-caption {
     background: center;
     font-family: "Exo", arial;
-    -webkit-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+    transform: rotate(-5deg);
     text-decoration: none;
 }
 
@@ -109,10 +83,7 @@ header, main, footer {
 }
 
 .nav-menu-tiles {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     width: auto;
     /* margin */
     margin-left: 10px;
@@ -130,12 +101,8 @@ header, main, footer {
     font-size: 1.25rem;
     text-shadow: 1px 1px 1px black;
     /* misc */
-    -webkit-box-shadow: 1px 2px 3px black;
-            box-shadow: 1px 2px 3px black;
+    box-shadow: 1px 2px 3px black;
     display: block;
-    background-image: -webkit-gradient(linear, left top, right top, from(#00b4db), to(#0083b0));
-    background-image: -webkit-linear-gradient(left, #00b4db, #0083b0);
-    background-image: -o-linear-gradient(left, #00b4db, #0083b0);
     background-image: linear-gradient(to right, #00b4db, #0083b0);
 }
 
@@ -153,37 +120,27 @@ header, main, footer {
 .nav-menu-tiles:hover {
     cursor: pointer;
     border-color: cyan;
-    background-image: -webkit-gradient(linear, left top, right top, from(#00d2ff), to(#3a7bd5));
-    background-image: -webkit-linear-gradient(left, #00d2ff, #3a7bd5);
-    background-image: -o-linear-gradient(left, #00d2ff, #3a7bd5);
     background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
 }
 
 .nav-menu-tiles:active img {
-    -webkit-filter: invert(100%);
-            filter: invert(100%);
+    filter: invert(100%);
 }
 
 .nav-menu-tiles:active {
     position: relative;
     top: 1px;
     left: 1px;
-    -webkit-box-shadow: 0 1px 3px black;
-            box-shadow: 0 1px 3px black;
+    box-shadow: 0 1px 3px black;
     color: white;
-    background-image: -webkit-gradient(linear, left top, right top, from(#00b4db), to(#0083b0));
-    background-image: -webkit-linear-gradient(left, #00b4db, #0083b0);
-    background-image: -o-linear-gradient(left, #00b4db, #0083b0);
     background-image: linear-gradient(to right, #00b4db, #0083b0);
 }
 
 /* styling the sidebar */
 #sidebar {
-    position: -webkit-sticky;
     position: sticky;
     border-left: 2px solid black;
-    -webkit-box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
-            box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
+    box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
     border-radius: 10px;
     display: block;
     margin: 100px 30px auto 1rem;
@@ -221,8 +178,7 @@ header, main, footer {
 /* styling the search box */
 input[type="search"] {
     background-color: transparent;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border: 1.5px solid #ccc;
     border-radius: 4px;
 }
@@ -241,9 +197,7 @@ article h2, article h3 {
 
 article > p {
     line-height: 1.7rem;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    hyphens: auto;
     text-indent: 2%;
 }
 
