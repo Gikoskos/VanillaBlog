@@ -41,7 +41,7 @@ body {
 }
 
 /* Using the flexbox layout style */
-header, main, footer {
+header, main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -72,37 +72,6 @@ header, main, footer {
         -ms-transform: rotate(-5deg);
             transform: rotate(-5deg);
     text-decoration: none;
-}
-
-@media only screen and (max-width: 600px) {
-    #main-logo-caption {
-        font-size: 1.5rem;
-    }
-
-    .nav-menu-tiles {
-        margin: 0;
-        padding: 0;
-        visibility: hidden;
-    }
-
-    #sidebar {
-        visibility: hidden;
-    }
-
-    article {
-        position: relative;
-        right: 150px;
-        padding: 0;
-        margin-left: -50px;
-        margin-right: -130px;
-        margin-top: -100px;
-    }
-}
-
-@media only screen and (max-width: 510px) {
-    #main-logo-caption {
-        font-size: 1rem;
-    }
 }
 
 #main-logo-link {
@@ -265,6 +234,7 @@ input[type="search"] {
 
 /* styling the article */
 article {
+    padding-right: 2%;
     width: 100%;
     text-align: justify;
     display: block;
@@ -285,13 +255,69 @@ article > p {
 
 /* styling the footer */
 footer {
-    padding: 0;
-    position: relative;
-    left: 27%;
+    width: auto;
+    margin: auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* responsive design styles */
+@media only screen and (max-width: 705px) {
+    .nav-menu-tiles {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #main-logo-caption {
+        font-size: 1.5rem;
+    }
+
+    #nav-menu ul {
+        padding: 0px;
+    }
+
+    .nav-menu-tiles figcaption {
+        display: none;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    article {
+        align-content: center;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    #main-logo-caption {
+        font-size: 1rem;
+    }
+
+    #nav-menu ul {
+        margin-left: 0px;
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #nav-menu ul {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
 }
 
 /* misc */
 [href^=mailto]::before {
     /* prepend all mailto hyperlinks with the envelope emoji */
     content: '✉ ';
+}
+
+[href^=http]::after {
+    content: '⤴';
 }
