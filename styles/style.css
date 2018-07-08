@@ -51,8 +51,8 @@ header, main {
 #main-logo {
     /* push the logo a few pixels on the left to not intrude
       on the navigation bar */
-    margin-left: 10px;
-    padding: 0;
+    margin: auto;
+    padding: 20px;
     display: block;
     width: 100%;
     text-align: center;
