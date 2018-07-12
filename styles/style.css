@@ -59,6 +59,7 @@ header, main {
     text-shadow: 1px 0px 10px darkgrey;
     line-height: 0;
     color: black;
+    transition: opacity 0.5s;
 }
 
 #main-logo:hover {
@@ -130,6 +131,7 @@ header, main {
     font-size: 1.25rem;
     text-shadow: 1px 1px 1px black;
     /* misc */
+    transition: border-color 0.4s, color 0.4s;
     -webkit-box-shadow: 1px 2px 3px black;
             box-shadow: 1px 2px 3px black;
     display: block;
@@ -184,15 +186,13 @@ header, main {
 
 /* styling the sidebar */
 #sidebar {
-    position: -webkit-sticky;
-    position: sticky;
     border-left: 2px solid black;
     -webkit-box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
             box-shadow: -8px 10px 10px -7px rgba(0,0,0,0.59);
     border-radius: 10px;
     display: block;
     margin: 100px 30px auto 1rem;
-    padding: 10px 10px 100px 10px;
+    padding: 10px 50px 100px 10px;
 }
 
 .sidebar-content-boxes {
@@ -202,7 +202,8 @@ header, main {
 
 .sidebar-box-headers {
     display: block;
-    margin-left: 10px;
+    text-align: center;
+    margin-left: 30%;
     padding: 0;
 }
 
@@ -221,16 +222,74 @@ header, main {
 .sidebar-links:hover {
     background: url('../images/arrow-right.svg') no-repeat 0% 2px;
     background-size: 16px 16px;
+    animation-duration: 0.2s;
+    animation-name: bckg-slidein;
+}
+
+/* smooth out the appearance of the arrow next to the links */
+@keyframes bckg-slidein {
+    from {
+        background-size: 0px 16px;
+    }
+
+    to {
+        background-size: 16px 16px;
+    }
 }
 
 /* styling the search box */
+#sidebar-search {
+    display: flex;
+}
+
 input[type="search"] {
     background-color: transparent;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border: 1.5px solid #ccc;
     border-radius: 4px;
+    font-family: inherit;
+    width: 150%;
+    /* this line makes sure that text typed
+    on the search box, won't go beneath the search button */
+    padding-right: 25%;
+    margin-right: -13%;
 }
+
+input[type="search"]:focus {
+    animation-duration: 0.5s;
+    animation-name: cyanlightup;
+    box-shadow: 0px 0px 5px cyan;
+}
+
+@keyframes cyanlightup {
+    from {
+        box-shadow: 0px 0px 0px cyan;
+    }
+
+    to {
+        box-shadow: 0px 0px 5px cyan;
+    }
+}
+
+input[type="submit"] {
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 3%;
+    margin-left: -10px;
+    border-radius: 5px;
+}
+
+input[type="search"]:focus+input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 4px 0px 5px cyan;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px cyan;
+}
+
 
 /* styling the article */
 article {
