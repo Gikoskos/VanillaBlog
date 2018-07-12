@@ -59,6 +59,8 @@ header, main {
     text-shadow: 1px 0px 10px darkgrey;
     line-height: 0;
     color: black;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
 
@@ -131,6 +133,8 @@ header, main {
     font-size: 1.25rem;
     text-shadow: 1px 1px 1px black;
     /* misc */
+    -webkit-transition: border-color 0.4s, color 0.4s;
+    -o-transition: border-color 0.4s, color 0.4s;
     transition: border-color 0.4s, color 0.4s;
     -webkit-box-shadow: 1px 2px 3px black;
             box-shadow: 1px 2px 3px black;
@@ -222,11 +226,22 @@ header, main {
 .sidebar-links:hover {
     background: url('../images/arrow-right.svg') no-repeat 0% 2px;
     background-size: 16px 16px;
-    animation-duration: 0.2s;
-    animation-name: bckg-slidein;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+    -webkit-animation-name: bckg-slidein;
+            animation-name: bckg-slidein;
 }
 
 /* smooth out the appearance of the arrow next to the links */
+@-webkit-keyframes bckg-slidein {
+    from {
+        background-size: 0px 16px;
+    }
+
+    to {
+        background-size: 16px 16px;
+    }
+}
 @keyframes bckg-slidein {
     from {
         background-size: 0px 16px;
@@ -239,6 +254,8 @@ header, main {
 
 /* styling the search box */
 #sidebar-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -257,18 +274,35 @@ input[type="search"] {
 }
 
 input[type="search"]:focus {
-    animation-duration: 0.5s;
-    animation-name: cyanlightup;
-    box-shadow: 0px 0px 5px cyan;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: cyanlightup;
+            animation-name: cyanlightup;
+    -webkit-box-shadow: 0px 0px 5px cyan;
+            box-shadow: 0px 0px 5px cyan;
+}
+
+@-webkit-keyframes cyanlightup {
+    from {
+        -webkit-box-shadow: 0px 0px 0px cyan;
+                box-shadow: 0px 0px 0px cyan;
+    }
+
+    to {
+        -webkit-box-shadow: 0px 0px 5px cyan;
+                box-shadow: 0px 0px 5px cyan;
+    }
 }
 
 @keyframes cyanlightup {
     from {
-        box-shadow: 0px 0px 0px cyan;
+        -webkit-box-shadow: 0px 0px 0px cyan;
+                box-shadow: 0px 0px 0px cyan;
     }
 
     to {
-        box-shadow: 0px 0px 5px cyan;
+        -webkit-box-shadow: 0px 0px 5px cyan;
+                box-shadow: 0px 0px 5px cyan;
     }
 }
 
@@ -282,12 +316,14 @@ input[type="submit"] {
 
 input[type="search"]:focus+input[type="submit"]:hover {
     cursor: pointer;
-    box-shadow: 4px 0px 5px cyan;
+    -webkit-box-shadow: 4px 0px 5px cyan;
+            box-shadow: 4px 0px 5px cyan;
 }
 
 input[type="submit"]:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 5px cyan;
+    -webkit-box-shadow: 0px 0px 5px cyan;
+            box-shadow: 0px 0px 5px cyan;
 }
 
 
@@ -346,7 +382,8 @@ footer {
     }
 
     article {
-        align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
         padding-right: 5%;
         padding-left: 5%;
     }
