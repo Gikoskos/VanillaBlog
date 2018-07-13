@@ -14,8 +14,8 @@ The icons used are called [Box Icons](https://boxicons.com/) and are licensed un
 
 The fonts used are:
 
-    * [Signika](https://fonts.google.com/specimen/Signika)
+* [Signika](https://fonts.google.com/specimen/Signika)
 
-    * [Exo](https://fonts.google.com/specimen/Exo)
+* [Exo](https://fonts.google.com/specimen/Exo)
 
 For the rest of the assets (site logo) and code, read LICENSE.
