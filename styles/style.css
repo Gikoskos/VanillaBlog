@@ -201,14 +201,16 @@ header, main {
 
 .sidebar-content-boxes {
     margin-bottom: 30px;
-    padding-right: 10px;
+    padding-right: auto;
 }
 
 .sidebar-box-headers {
     display: block;
     text-align: center;
-    margin-left: 30%;
-    padding: 0;
+}
+
+.sidebar-content-text {
+    text-align: center;
 }
 
 /* styling the related box */
@@ -409,7 +411,7 @@ footer {
         background-color: brown;
     }
 
-    #mobile-menu-btn:hover .burger-menu-btn {
+    #mobile-menu-btn:hover {
         cursor: pointer;
     }
 
