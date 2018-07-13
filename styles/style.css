@@ -1,4 +1,4 @@
-html {
+﻿html {
     background-image: -webkit-gradient(linear,
                                       left top, left bottom,
                                       from(rgba(242,246,248,1)),
@@ -442,36 +442,69 @@ footer {
                 transform: rotate(45deg) translate(-10%, -40%);
     }
 
+    .toggled #nav-menu {
+        position: absolute;
+        display: inline;
+        background-color: darkgray;
+        border-radius: 10px 10px 0px 0px;
+        padding-top: 10px;
+        bottom: auto;
+        top: 130px;
+        width: 100%;
+    }
+
+    #nav-menu ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .nav-menu-tiles {
+        width: 100%;
+        background-image: none;
+        background-color: lightgray;
+        font-size: 2rem;
+        color: darkorange;
+        border: 0;
+        border-radius: 0;
+        margin-top: -10px;
+        margin-bottom: -10px;
+        padding: 0;
+        padding-left: 88%;
+        padding-right: 88%;
+        margin-left: -88%;
+        margin-right: 0;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+
+    .nav-menu-tiles:active {
+        position: unset;
+        -webkit-box-shadow: unset;
+                box-shadow: unset;
+    }
+
+    .toggled article, .toggled footer {
+        display: none;
+    }
+
     article {
         -ms-flex-line-pack: center;
             align-content: center;
         padding-right: 5%;
         padding-left: 5%;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
     }
 }
 
 @media only screen and (max-width: 510px) {
     #main-logo-caption {
         font-size: 1.5rem;
-    }
-
-    #nav-menu ul {
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-}
-
-@media only screen and (max-width: 460px) {
-    #nav-menu ul {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
     }
 }
 
