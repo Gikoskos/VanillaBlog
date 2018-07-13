@@ -6,6 +6,7 @@ var body = doc.querySelector('body');
 
 mobile_menu.addEventListener('click', toggleBurgerMenu);
 
-function toggleBurgerMenu() {
+function toggleBurgerMenu()
+{
     body.classList.toggle('toggled');
 }

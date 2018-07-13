@@ -1,4 +1,4 @@
-﻿html {
+html {
     background-image: -webkit-gradient(linear,
                                       left top, left bottom,
                                       from(rgba(242,246,248,1)),
@@ -397,6 +397,10 @@ footer {
         -webkit-transition: 0.1s;
         -o-transition: 0.1s;
         transition: 0.1s;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
     }
 
     .burger-menu-btn:nth-child(odd) {
@@ -445,7 +449,6 @@ footer {
     .toggled #nav-menu {
         position: absolute;
         display: inline;
-        background-color: darkgray;
         border-radius: 10px 10px 0px 0px;
         padding-top: 10px;
         bottom: auto;
@@ -465,9 +468,8 @@ footer {
     .nav-menu-tiles {
         width: 100%;
         background-image: none;
-        background-color: lightgray;
         font-size: 2rem;
-        color: darkorange;
+        color: #FFE47F;
         border: 0;
         border-radius: 0;
         margin-top: -10px;
