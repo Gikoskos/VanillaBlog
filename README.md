@@ -2,7 +2,7 @@
 
 This is an exercise on building a responsive blog-like site template without external dependencies.
 
-Code is written in modern HTML5, CSS3 and Javascript.
+Code is written in pure HTML5, CSS3 and Javascript.
 
 [The template is hosted on github pages, and can be found live in this domain.](http://leblog.tk)
 
@@ -12,6 +12,10 @@ The background is called [What the hex](https://www.toptal.com/designers/subtlep
 
 The icons used are called [Box Icons](https://boxicons.com/) and are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+The fonts used are:
 
+    * [Signika](https://fonts.google.com/specimen/Signika)
+
+    * [Exo](https://fonts.google.com/specimen/Exo)
 
 For the rest of the assets (site logo) and code, read LICENSE.

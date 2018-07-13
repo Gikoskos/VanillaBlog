@@ -33,6 +33,10 @@ html {
     background-attachment: fixed;
 }
 
+#mobile-menu-button {
+    display: none;
+}
+
 body {
     margin: auto;
     width: auto;
@@ -89,26 +93,22 @@ header, main {
 /*** Styling the navigation bar next to the logo ***/
 #nav-menu {
     /* padding */
-    padding-left: 100px;
+    width: 80%;
     display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 #nav-menu ul {
+    width: 77%;
     /* margin */
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 50px;
-    margin-bottom: auto;
-    /* padding */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0 auto;
     /* list */
-    list-style-type: none;
+    list-style: none inside;
     /* misc */
     overflow: hidden;
-    display: block;
+    display: table;
 }
 
 #nav-menu li {
@@ -133,9 +133,9 @@ header, main {
     font-size: 1.25rem;
     text-shadow: 1px 1px 1px black;
     /* misc */
-    -webkit-transition: border-color 0.4s, color 0.4s;
-    -o-transition: border-color 0.4s, color 0.4s;
-    transition: border-color 0.4s, color 0.4s;
+    -webkit-transition: border-color 0.2s, color 0.2s;
+    -o-transition: border-color 0.2s, color 0.2s;
+    transition: border-color 0.2s, color 0.2s;
     -webkit-box-shadow: 1px 2px 3px black;
             box-shadow: 1px 2px 3px black;
     display: block;
@@ -358,9 +358,16 @@ footer {
 }
 
 /* responsive design styles */
-@media only screen and (max-width: 705px) {
+@media only screen and (max-width: 720px) {
     .nav-menu-tiles {
         margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #nav-menu li {
+        float: none;
+        margin: 10px 32%;
     }
 }
 
@@ -369,16 +376,68 @@ footer {
         font-size: 1.5rem;
     }
 
-    #nav-menu ul {
-        padding: 0px;
-    }
-
-    .nav-menu-tiles figcaption {
+    /* sidebar and navigation menu CANCELLED 😂😂 */
+    #sidebar, #nav-menu {
         display: none;
     }
 
-    #sidebar {
-        display: none;
+    /* hamburger menu styling */
+    #mobile-menu-btn {
+        display: block;
+        margin: auto;
+        width: 10%;
+    }
+
+    .burger-menu-btn:nth-child(n) {
+        border-radius: 10px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s;
+    }
+
+    .burger-menu-btn:nth-child(odd) {
+        padding-top: 9%;
+        padding-bottom: 9%;
+        background-color: orange;
+    }
+
+    .burger-menu-btn:nth-child(2) {
+        padding-top: 6%;
+        padding-bottom: 6%;
+        background-color: brown;
+    }
+
+    #mobile-menu-btn:hover .burger-menu-btn {
+        cursor: pointer;
+    }
+
+    #mobile-menu-btn:hover .burger-menu-btn,
+    #mobile-menu-btn:focus .burger-menu-btn {
+        -webkit-box-shadow: 0px 0px 2px blue;
+                box-shadow: 0px 0px 2px blue;
+    }
+
+    /* the shape of the button changes when it's clicked */
+    .toggled .burger-menu-btn:nth-child(n) {
+        background-color: black;
+    }
+
+    .toggled .burger-menu-btn:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-20%, 100%);
+            -ms-transform: rotate(-45deg) translate(-20%, 100%);
+                transform: rotate(-45deg) translate(-20%, 100%);
+    }
+
+    .toggled .burger-menu-btn:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggled .burger-menu-btn:nth-child(3) {
+        -webkit-transform: rotate(45deg) translate(-10%, -40%);
+            -ms-transform: rotate(45deg) translate(-10%, -40%);
+                transform: rotate(45deg) translate(-10%, -40%);
     }
 
     article {
@@ -391,12 +450,18 @@ footer {
 
 @media only screen and (max-width: 510px) {
     #main-logo-caption {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     #nav-menu ul {
-        margin-left: 0px;
-        margin-top: 20%;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }
 
