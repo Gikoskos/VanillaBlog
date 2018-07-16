@@ -1,33 +1,4 @@
 html {
-    background-image: -webkit-gradient(linear,
-                                      left top, left bottom,
-                                      from(rgba(242,246,248,1)),
-                                      color-stop(15%, rgba(216,225,231,1)),
-                                      color-stop(21%, rgba(181,198,208,1)),
-                                      color-stop(61%, rgba(203,219,229,1)),
-                                      color-stop(87%, rgba(217,232,242,1)),
-                                      to(rgba(224,239,249,1)));
-    background-image: -webkit-linear-gradient(top,
-                                      rgba(242,246,248,1) 0%,
-                                      rgba(216,225,231,1) 15%,
-                                      rgba(181,198,208,1) 21%,
-                                      rgba(203,219,229,1) 61%,
-                                      rgba(217,232,242,1) 87%,
-                                      rgba(224,239,249,1) 100%);
-    background-image: -o-linear-gradient(top,
-                                      rgba(242,246,248,1) 0%,
-                                      rgba(216,225,231,1) 15%,
-                                      rgba(181,198,208,1) 21%,
-                                      rgba(203,219,229,1) 61%,
-                                      rgba(217,232,242,1) 87%,
-                                      rgba(224,239,249,1) 100%);
-    background-image: linear-gradient(to bottom,
-                                      rgba(242,246,248,1) 0%,
-                                      rgba(216,225,231,1) 15%,
-                                      rgba(181,198,208,1) 21%,
-                                      rgba(203,219,229,1) 61%,
-                                      rgba(217,232,242,1) 87%,
-                                      rgba(224,239,249,1) 100%);
     background-image: url(../images/what-the-hex.png);
     background-repeat: repeat;
     background-attachment: fixed;
@@ -109,6 +80,8 @@ header, main {
     /* misc */
     overflow: hidden;
     display: table;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 #nav-menu li {
@@ -150,15 +123,9 @@ header, main {
             user-select: none;
 }
 
-.nav-menu-tiles a {
-    text-decoration: none;
-    color: #FFE47F;
-    font-size: 1.25rem;
-    text-shadow: 1px 1px 1px black;
-}
-
 .nav-menu-tiles:focus {
-    border: 0.1rem dashed lightgrey;
+    border: 0.12rem dashed lightgrey;
+    outline: none;
 }
 
 .nav-menu-tiles:hover {
@@ -187,6 +154,7 @@ header, main {
     background-image: -o-linear-gradient(left, #00b4db, #0083b0);
     background-image: linear-gradient(to right, #00b4db, #0083b0);
 }
+
 
 /* styling the sidebar */
 #sidebar {
@@ -225,7 +193,7 @@ header, main {
     margin-left: -30px;
 }
 
-.sidebar-links:hover {
+.sidebar-links:hover, .sidebar-links:focus {
     background: url('../images/arrow-right.svg') no-repeat 0% 2px;
     background-size: 16px 16px;
     -webkit-animation-duration: 0.2s;
@@ -378,7 +346,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    /* sidebar and navigation menu CANCELLED 😂😂 */
+    /* sidebar and navigation menu CANCELLED ???? */
     #sidebar, #nav-menu {
         display: none;
     }
@@ -516,6 +484,7 @@ footer {
     content: '✉ ';
 }
 
-[href^=http]::after {
-    content: '⤴';
+article [href^=http]::after {
+    /* prepend all href hyperlinks with the envelope emoji */
+    content: '⤻ ';
 }
